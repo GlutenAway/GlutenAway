@@ -1,2 +1,87 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~bootstrap/dist/css/bootstrap.css";
+html, body {
+    height: 100%;
+}
+body {
+    font-family: "Poppins", sans-serif !important;
+    background: url("assets/ga-web-bg.png"); 
+    background-repeat: repeat;
+    background-size: cover;
+    height: 100%;
+    min-height: 100%;
+}
+
+
+nav{
+    background-color: white;
+    font-family: "Open Sans", sans-serif !important;
+}
+nav a{
+    color: #0D522C !important;
+}
+nav .active{
+    font-weight: bold;
+}
+.green{
+    color: #3C7962; 
+}
+.light-green{
+    color: #77BBA2;
+}
+.dark-green{
+    color: #0D522C;
+}
+.btn:active,.btn.active {
+    background-color: #77BBA2 !important; 
+    border-color: #0D522C !important; /* Cambiar el color del borde al hacer clic */
+    color: white !important; 
+}
+
+.ga-btn-green{
+    background-color: #3C7962;
+    color: white;
+    border-radius: 20px;
+}
+.ga-btn-green:hover{
+    background-color: #0D522C;
+    color: white;
+    border-radius: 20px;
+}
+
+.ga-btn-light-green{
+    background-color: #77BBA2;
+    color: #0D522C;
+    border-radius: 20px;
+}
+.ga-btn-light-green:hover{
+    background-color: #0D522C;
+    color: white;
+}
+.ga-btn-dark-green{
+    background-color: #0D522C;
+    color: white;
+    border-radius: 20px;
+}
+.ga-btn-dark-green:hover{
+    background-color: #77BBA2;
+    color: #0D522C;
+    border-radius: 20px;
+}
+
+.active{
+    border-bottom: 2px solid #0D522C;
+    padding-bottom: 2px;
+    display: inline-block;
+}
+
+footer{
+    background-color: #0D522C;
+    color: white;
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: -1;
+    border-bottom: none;
+}
+
