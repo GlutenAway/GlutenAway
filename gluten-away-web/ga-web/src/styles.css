@@ -12,7 +12,6 @@ body {
     min-height: 100%;
 }
 
-
 nav{
     background-color: white;
     font-family: "Open Sans", sans-serif !important;
@@ -69,19 +68,46 @@ nav .active{
     border-radius: 20px;
 }
 
+.bg-green{
+    background-color: #3C7962;
+}
+.bg-light-green{
+    background-color: #77BBA2;
+}
+.bg-dark-green{
+    background-color: #0D522C;
+}
+
 .active{
     border-bottom: 2px solid #0D522C;
     padding-bottom: 2px;
     display: inline-block;
 }
 
-footer{
-    background-color: #0D522C;
+.footer{
+    background-color: #000000;
     color: white;
     bottom: 0;
+    left: 0;
     width: 100%;
     padding: 10px;
     margin-bottom: -1;
+    margin-top: auto;
     border-bottom: none;
+    border-top: none;
+    font-family: "Open Sans", sans-serif !important;
 }
+
+.navbar-toggler:focus,
+.navbar-toggler.focus{
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+@media (max-width: 576px) {
+    .img-sm {
+      width: 60px; /* Ancho deseado para pantallas extra pequeñas y pequeñas */
+      height: 60px; /* Altura automática para mantener la proporción */
+    }
+  }
 
