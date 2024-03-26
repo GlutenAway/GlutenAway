@@ -9,8 +9,39 @@ const routes: Routes = [
     component: AdminHomeComponent
   },
   {
-    path:'admin-products',
-    component: AdminProductsComponent
+    path:'admin',
+    children: [
+      {
+        path: 'home',
+        component: AdminHomeComponent
+      },
+      {
+        path: 'products',
+        children: [
+          {
+            path: '',
+            component: AdminProductsComponent //LIST PRODUCTS
+          },
+          {
+            path: 'list',
+            component: AdminProductsComponent //LIST PRODUCTS
+          },
+          {
+            path: 'new',
+            component: AdminProductsComponent //NEW PRODUCT
+          },
+          {
+            path: ':id',
+            component: AdminProductsComponent //EDIT PRODUCT
+          },
+          {
+            path: '**',
+            redirectTo: 'home'
+          }
+
+        ]
+      }
+    ]
   }
 
 ];
