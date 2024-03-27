@@ -23,13 +23,13 @@ nav .active{
     font-weight: bold;
 }
 .green{
-    color: #3C7962; 
+    color: #3C7962 !important; 
 }
 .light-green{
-    color: #77BBA2;
+    color: #77BBA2 !important;
 }
 .dark-green{
-    color: #0D522C;
+    color: #0D522C !important;
 }
 .btn:active,.btn.active {
     background-color: #77BBA2 !important; 
@@ -111,3 +111,8 @@ nav .active{
     }
   }
 
+  @media screen and (max-width: 768px) {
+    .main.collapsed {
+        display: none;
+    }
+}

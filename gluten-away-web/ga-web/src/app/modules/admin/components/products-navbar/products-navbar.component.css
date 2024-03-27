@@ -14,31 +14,6 @@ li {
 }
 
 
-.wrapper {
-    display: flex;
-}
-
-.main {
-    min-height: 100vh;
-    width: 100%;
-    overflow: hidden;
-    transition: all 0.35s ease-out;
-}
-
-@media screen and (max-width: 768px) {
-    .main {
-        min-height: 100vh;
-        width: 100%;
-        overflow: hidden;
-        transition: all 0.35s ease-out;
-    }
-
-    .main.expand-content {
-        display: none;
-    }
-}
-
-
 #sidebar {
     width: 70px;
     min-width: 70px;
@@ -47,12 +22,13 @@ li {
     background-color: #3C7962;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    min-height: 120vh;
 }
 
 #sidebar.expand {
     width: 300px;
     min-width: 300px;
+    min-height: 120vh;
 }
 
 .toggle-btn {

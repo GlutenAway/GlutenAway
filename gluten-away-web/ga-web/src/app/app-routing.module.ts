@@ -1,49 +1,30 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AdminProductsComponent } from './admin/admin-products/admin-products/admin-products.component';
-import { AdminHomeComponent } from './admin/admin-home/admin-home.component';
+import { NotFoundComponent } from './core/pages/not-found/not-found.component';
+
 
 const routes: Routes = [
   {
     path: '',
-    component: AdminHomeComponent
+    redirectTo: 'products',
+    pathMatch: 'full'
+  },
+  {
+    path:'products',
+    loadChildren: () => import('./modules/products/products.module').then(m => m.ProductsModule)
+  },
+  {
+    path:'establishments',
+    loadChildren: () => import('./modules/establishments/establishments.module').then(m => m.EstablishmentsModule)
   },
   {
     path:'admin',
-    children: [
-      {
-        path: 'home',
-        component: AdminHomeComponent
-      },
-      {
-        path: 'products',
-        children: [
-          {
-            path: '',
-            component: AdminProductsComponent //LIST PRODUCTS
-          },
-          {
-            path: 'list',
-            component: AdminProductsComponent //LIST PRODUCTS
-          },
-          {
-            path: 'new',
-            component: AdminProductsComponent //NEW PRODUCT
-          },
-          {
-            path: ':id',
-            component: AdminProductsComponent //EDIT PRODUCT
-          },
-          {
-            path: '**',
-            redirectTo: 'home'
-          }
-
-        ]
-      }
-    ]
+    loadChildren: () => import('./modules/admin/admin.module').then(m => m.AdminModule)
+  },
+  {
+    path: '**',
+    component: NotFoundComponent
   }
-
 ];
 
 @NgModule({
